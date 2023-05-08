@@ -1,0 +1,123 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 500;
+     font-size: 20px;
+ }
+
+ .test {
+     font-family: 'Roboto', sans-serif;
+     font-style:italic;
+ }
+
+ .cols {
+     display: flex;
+     align-items: center;
+ }
+
+ .separation {
+     height: 100vh;
+     width: 2px;
+     background-color: #cccccc;
+ }
+
+ .leftcol {
+     width: 75%;
+     text-align: center;
+ }
+
+ .rightcol {
+     padding-left: 20px;
+
+ }
+
+
+ #myPictureOnCard img {
+     width: 600px;
+ }
+
+ .title,
+ .picture,
+ .message,
+ .font,
+ .color,
+ .style,
+ .printbutton {
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+ }
+
+ .picture,
+ .message,
+ .font,
+ .color,
+ .style,
+ .printbutton {
+     margin-top: 20px;
+
+ }
+
+ #myFont label {
+     font-size: 25px;
+ }
+
+ .arialfont label {
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .calibrifont label {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .robotofont label {
+     font-family: 'Roboto', sans-serif;
+ }
+
+ #myTitleOnCard {
+     margin: auto;
+     font-size: 40px;
+     width: 600px;
+ }
+
+ #myMessageOnCard {
+     margin: auto;
+     width: 600px;
+     font-size: 25px;
+ }
+
+ .bordercard {
+     margin: auto;
+     background-color: #e6e4e4;
+     border: 3px solid rgb(105, 104, 104);
+     border-radius: 30px;
+     width: 700px;
+ }
+
+ #boutonMer {
+     border: none;
+     padding: 3px 10px;
+     border-radius: 5px;
+     background-color: rgb(165, 240, 240);
+ }
+
+ #boutonForet {
+     border: none;
+     padding: 3px 10px;
+     border-radius: 5px;
+     background-color: rgb(165, 240, 181);
+ }
+
+ #boutonMontagne {
+     border: none;
+     padding: 3px 10px;
+     border-radius: 5px;
+     background-color: rgb(180, 143, 121);
+ }
+
+ #photoForet,
+ #photoMontagne {
+     display: none;
+ }

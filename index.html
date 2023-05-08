@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte postale</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cols">
+        <div class="leftcol">
+            <div class="bordercard">
+                <div>
+                    <p id="myTitleOnCard">Titre</p>
+                </div>
+                <div id="myPictureOnCard">
+                    <img id="photo" src="/assets/img/plage.jpg" alt="photo de plage">
+                </div>
+                <div id="myMessageOnCard">
+                    Mon message
+                </div>
+            </div>
+        </div>
+        <div class="separation">
+        </div>
+        <div class="rightcol">
+            <div class="title">
+                <label for="myTitle">Veuillez saisir un titre :</label>
+                <input onkeyup="myTitleOnCard.innerHTML=this.value" type="text" id="myTitle"
+                    placeholder="Ecrivez votre titre ici">
+            </div>
+            <div class="picture">
+                <label for="myPicture">Veuillez choisir votre photo :</label>
+                <div id="myPicture">
+                    <button id="boutonMer" onclick="changePictureMer()">Mer</button>
+                    <button id="boutonForet" onclick="changePictureForet()">Foret</button>
+                    <button id="boutonMontagne" onclick="changePictureMontagne()">Montagne</button>
+                </div>
+            </div>
+            <div class="message">
+                <label for="myMessage">Veuillez saisir votre message :</label>
+                <textarea onkeyup="myMessageOnCard.innerHTML = this.value" name="message" id="myMessage"
+                    placeholder="Ecrivez votre message ici"></textarea>
+            </div>
+            <div class="font">
+                <label for="myFont">Veuillez choisir une police d'écriture :</label>
+                <div id="myFont">
+                    <div class="arialfont">
+                        <input onclick="changeFontArial()" type="radio" id="arial" name="font" value="Arial" checked>
+                        <label for="arial">Arial</label>
+                    </div>
+
+                    <div class="calibrifont">
+                        <input onclick="changeFontCalibri()" type="radio" id="calibri" name="font" value="Calibri">
+                        <label for="calibri">Calibri</label>
+                    </div>
+
+                    <div class="robotofont">
+                        <input onclick="changeFontRoboto()" type="radio" id="roboto" name="font" value="Roboto">
+                        <label for="roboto">Roboto</label>
+                    </div>
+                </div>
+            </div>
+            <div class="color">
+                <label for="myColor">Veuillez choisir une couleur de police</label>
+                <input onclick="changeColor()" type="color" id="myColor" name="head" value="#e66465">
+            </div>
+            <div class="style">
+                <label for="myStyle">Veuillez choisir un style de texte :</label>
+                <select name="style" id="myStyle">
+                    <option id="normal" value="Normal">Normal</option>
+                    <option id="italic"  value="Italic">Italic</option>
+                    <option id="bold" value="Bold">Bold</option>
+                </select>
+            </div>
+            <div class="printbutton">
+                <input id="myPrint" name="impression" type="button" onclick="imprimer_page()" value="Imprimer" />
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/JavaScript/script.js">
+
+    </script>
+</body>
+
+</html>

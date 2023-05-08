@@ -1,0 +1,62 @@
+body {
+    font-family: 'Helvetica Neue';
+    font-size: 16px;
+    color: #bdc3c7;
+    background: #34495e;
+  }
+  
+  #taille a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 1px #ebebeb dashed;
+  }
+  
+  #texte {
+    margin-top: 30px;
+    font-size: 7px;
+  }
+  
+  #taille {
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  
+  #couleur a {
+    margin-left: 4px;
+    padding: 6px 8px;
+  }
+  
+  #noir {
+    background-color: #000;
+    color: #000;
+  }
+  
+  #rouge {
+    background-color: #FF0000;
+    color: #FF0000;
+  }
+  
+  #vert {
+    background-color: #00FF00;
+    color: #00FF00;
+  }
+  
+  #bleu {
+    background-color: #0000FF;
+    color: #0000FF;
+  }
+  
+  #rose {
+    background-color: #FF00FF;
+    color: #FF00FF;
+  }
+  
+  #jaune {
+    background-color: #FFFF00;
+    color: #FFFF00;
+  }
+  
+  #cyan {
+    background-color: #00FFFF;
+    color: #00FFFF;
+  }
