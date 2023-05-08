@@ -22,6 +22,7 @@
 
 <body>
     <div class="cols">
+        <!-- Colonne de gauche pour le resultat de la carte -->
         <div class="leftcol">
             <div class="bordercard">
                 <div>
@@ -38,11 +39,13 @@
         <div class="separation">
         </div>
         <div class="rightcol">
+            <!-- Input pour changement de titre -->
             <div class="title">
                 <label for="myTitle">Veuillez saisir un titre :</label>
                 <input onkeyup="myTitleOnCard.innerHTML=this.value" type="text" id="myTitle"
                     placeholder="Ecrivez votre titre ici">
             </div>
+            <!-- Button pour changement d'image -->
             <div class="picture">
                 <label for="myPicture">Veuillez choisir votre photo :</label>
                 <div id="myPicture">
@@ -51,11 +54,13 @@
                     <button id="boutonMontagne" onclick="changePictureMontagne()">Montagne</button>
                 </div>
             </div>
+            <!-- Textarea pour changement de message -->
             <div class="message">
                 <label for="myMessage">Veuillez saisir votre message :</label>
                 <textarea onkeyup="myMessageOnCard.innerHTML = this.value" name="message" id="myMessage"
                     placeholder="Ecrivez votre message ici"></textarea>
             </div>
+            <!-- Input radio pour le changement de font -->
             <div class="font">
                 <label for="myFont">Veuillez choisir une police d'écriture :</label>
                 <div id="myFont">
@@ -75,18 +80,21 @@
                     </div>
                 </div>
             </div>
+            <!-- Input color pour changer la couleur de la police-->
             <div class="color">
                 <label for="myColor">Veuillez choisir une couleur de police</label>
-                <input onclick="changeColor()" type="color" id="myColor" name="head" value="#e66465">
+                <input onblur="changeColor()" type="color" id="myColor" name="head" value="#e66465">
             </div>
+            <!-- Select pour changer le style de la police-->
             <div class="style">
                 <label for="myStyle">Veuillez choisir un style de texte :</label>
                 <select name="style" id="myStyle">
                     <option id="normal" value="Normal">Normal</option>
-                    <option id="italic"  value="Italic">Italic</option>
-                    <option id="bold" value="Bold">Bold</option>
+                    <option id="italic" value="Italic">Italic</option>
+                    <option id="underline" value="underline">Souligné</option>
                 </select>
             </div>
+            <!-- Button print pour imprimer le carte-->
             <div class="printbutton">
                 <input id="myPrint" name="impression" type="button" onclick="imprimer_page()" value="Imprimer" />
             </div>
