@@ -88,15 +88,16 @@
             <!-- Select pour changer le style de la police-->
             <div class="style">
                 <label for="myStyle">Veuillez choisir un style de texte :</label>
-                <select name="style" id="myStyle">
-                    <option id="normal" value="Normal">Normal</option>
-                    <option id="italic" value="Italic">Italic</option>
-                    <option id="underline" value="underline">Souligné</option>
+                <select onchange="changeStyleNormal()" name="style" id="myStyle">
+                    <option id="Normal" value="normal">Normal</option>
+                    <option id="Italic" value="italic">Italic</option>
+                    <option id="Underline" value="underline">Souligné</option>
+                    <option id="Bold" value="bold">Bold</option>
                 </select>
             </div>
             <!-- Button print pour imprimer le carte-->
             <div class="printbutton">
-                <input id="myPrint" name="impression" type="button" onclick="imprimer_page()" value="Imprimer" />
+                <input onclick="printCard()" id="myPrint" name="impression" type="button" onclick="imprimer_page()" value="Imprimer" />
             </div>
         </div>
     </div>

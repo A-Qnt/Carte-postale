@@ -39,10 +39,48 @@ function changeColor() {
 }
 
 let myStyle = document.getElementById("myStyle")
-let normal = document.getElementById("normal")
-let italic = document.getElementById("italic")
-let underline = document.getElementById("underline")
 
-function changeStyle() {
-    myTitleOnCard.style.fontStyle = myStyle.value
+function changeStyleNormal() {
+    switch (myStyle.value) {
+        case "italic":
+            myTitleOnCard.style.textDecoration = "none"
+            myMessageOnCard.style.textDecoration = "none"
+            myTitleOnCard.style.fontWeight = "normal"
+            myMessageOnCard.style.fontWeight = "normal"
+            myTitleOnCard.style.fontStyle = "italic"
+            myMessageOnCard.style.fontStyle = "italic"
+            break;
+        case "bold":
+            myTitleOnCard.style.textDecoration = "none"
+            myMessageOnCard.style.textDecoration = "none"
+            myTitleOnCard.style.fontWeight = "bold"
+            myMessageOnCard.style.fontWeight = "bold"
+            myTitleOnCard.style.fontStyle = "normal"
+            myMessageOnCard.style.fontStyle = "normal"
+            break;
+        case "underline":
+            myTitleOnCard.style.textDecoration = "underline"
+            myMessageOnCard.style.textDecoration = "underline"
+            myTitleOnCard.style.fontWeight = "normal"
+            myMessageOnCard.style.fontWeight = "normal"
+            myTitleOnCard.style.fontStyle = "normal"
+            myMessageOnCard.style.fontStyle = "normal"
+            break;
+        default:
+            myTitleOnCard.style.textDecoration = "none"
+            myMessageOnCard.style.textDecoration = "none"
+            myTitleOnCard.style.fontWeight = "normal"
+            myMessageOnCard.style.fontWeight = "normal"
+            myTitleOnCard.style.fontStyle = "normal"
+            myMessageOnCard.style.fontStyle = "normal"
+    }
+}
+
+let leftcol = document.getElementById("leftcol")
+let rightcol = document.getElementById("rightcol")
+
+
+function printCard() {
+    
+    window.print()
 }
