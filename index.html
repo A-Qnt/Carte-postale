@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte postale</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- CSS pour le style -->
+    <link rel="stylesheet" href="/assets/css/style.css" media="screen">
+    <!-- CSS pour le Print -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +27,7 @@
     <div class="cols">
         <!-- Colonne de gauche pour le resultat de la carte -->
         <div class="leftcol">
-            <div class="bordercard">
+            <div id="bordercard">
                 <div>
                     <p id="myTitleOnCard">Titre</p>
                 </div>
@@ -82,8 +85,13 @@
             </div>
             <!-- Input color pour changer la couleur de la police-->
             <div class="color">
-                <label for="myColor">Veuillez choisir une couleur de police</label>
+                <label for="myColor">Veuillez choisir une couleur de police :</label>
                 <input onblur="changeColor()" type="color" id="myColor" name="head" value="#e66465">
+            </div>
+            <!-- Input color pour changer la couleur du background-->
+            <div class="bgcolor">
+                <label for="mybgColor">Veuillez choisir une couleur de fond :</label>
+                <input onblur="changebgColor()" type="color" id="mybgColor" name="head" value="#e66465">
             </div>
             <!-- Select pour changer le style de la police-->
             <div class="style">

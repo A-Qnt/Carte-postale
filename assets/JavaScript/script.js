@@ -1,3 +1,5 @@
+// Changement de photo
+
 function changePictureForet() {
     let foret = document.getElementById("photo");
     foret.src = "/assets/img/foret.jpg"
@@ -12,6 +14,8 @@ function changePictureMontagne() {
     let montagne = document.getElementById("photo");
     montagne.src = "/assets/img/montagne.jpg"
 }
+
+// Changeent de Font
 
 function changeFontArial() {
     document.getElementById("myTitleOnCard").style.fontFamily = "Arial, Helvetica, sans-serif"
@@ -29,6 +33,8 @@ function changeFontRoboto() {
     document.getElementById("myMessageOnCard").style.fontFamily = "'Roboto', sans-serif"
 }
 
+// Changement de couleur de police
+
 let myTitleOnCard = document.getElementById("myTitleOnCard")
 let myMessageOnCard = document.getElementById("myMessageOnCard")
 let myColor = document.getElementById("myColor")
@@ -37,6 +43,18 @@ function changeColor() {
     myTitleOnCard.style.color = myColor.value
     myMessageOnCard.style.color = myColor.value
 }
+
+// Changement de couleur de background
+
+let bordercard = document.getElementById("bordercard")
+let mybgColor = document.getElementById("mybgColor")
+
+function changebgColor() {
+    bordercard.style.backgroundColor = mybgColor.value
+
+}
+
+// Changement de style de font
 
 let myStyle = document.getElementById("myStyle")
 
@@ -76,9 +94,8 @@ function changeStyleNormal() {
     }
 }
 
-let leftcol = document.getElementById("leftcol")
-let rightcol = document.getElementById("rightcol")
 
+//  Print
 
 function printCard() {
     
