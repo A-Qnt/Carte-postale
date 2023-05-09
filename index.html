@@ -45,8 +45,7 @@
             <!-- Input pour changement de titre -->
             <div class="title">
                 <label for="myTitle">Veuillez saisir un titre :</label>
-                <input onkeyup="myTitleOnCard.innerHTML=this.value" type="text" id="myTitle"
-                    placeholder="Ecrivez votre titre ici">
+                <input type="text" id="myTitle" placeholder="Ex : Vacances à la mer">
             </div>
             <!-- Button pour changement d'image -->
             <div class="picture">
@@ -60,25 +59,24 @@
             <!-- Textarea pour changement de message -->
             <div class="message">
                 <label for="myMessage">Veuillez saisir votre message :</label>
-                <textarea onkeyup="myMessageOnCard.innerHTML = this.value" name="message" id="myMessage"
-                    placeholder="Ecrivez votre message ici"></textarea>
+                <textarea name="message" id="myMessage" placeholder="Ex : Superbe vacances en famille"></textarea>
             </div>
             <!-- Input radio pour le changement de font -->
             <div class="font">
                 <label for="myFont">Veuillez choisir une police d'écriture :</label>
                 <div id="myFont">
                     <div class="arialfont">
-                        <input onclick="changeFontArial()" type="radio" id="arial" name="font" value="Arial" checked>
+                        <input type="radio" id="arial" name="font" value="Arial" checked>
                         <label for="arial">Arial</label>
                     </div>
 
                     <div class="calibrifont">
-                        <input onclick="changeFontCalibri()" type="radio" id="calibri" name="font" value="Calibri">
+                        <input type="radio" id="calibri" name="font" value="Calibri">
                         <label for="calibri">Calibri</label>
                     </div>
 
                     <div class="robotofont">
-                        <input onclick="changeFontRoboto()" type="radio" id="roboto" name="font" value="Roboto">
+                        <input type="radio" id="roboto" name="font" value="Roboto">
                         <label for="roboto">Roboto</label>
                     </div>
                 </div>
@@ -86,17 +84,17 @@
             <!-- Input color pour changer la couleur de la police-->
             <div class="color">
                 <label for="myColor">Veuillez choisir une couleur de police :</label>
-                <input onblur="changeColor()" type="color" id="myColor" name="head" value="#e66465">
+                <input type="color" id="myColor" name="head" value="#e66465">
             </div>
             <!-- Input color pour changer la couleur du background-->
             <div class="bgcolor">
                 <label for="mybgColor">Veuillez choisir une couleur de fond :</label>
-                <input onblur="changebgColor()" type="color" id="mybgColor" name="head" value="#e66465">
+                <input type="color" id="mybgColor" name="head" value="#e66465">
             </div>
             <!-- Select pour changer le style de la police-->
             <div class="style">
                 <label for="myStyle">Veuillez choisir un style de texte :</label>
-                <select onchange="changeStyleNormal()" name="style" id="myStyle">
+                <select name="style" id="myStyle">
                     <option id="Normal" value="normal">Normal</option>
                     <option id="Italic" value="italic">Italic</option>
                     <option id="Underline" value="underline">Souligné</option>
@@ -105,8 +103,7 @@
             </div>
             <!-- Button print pour imprimer le carte-->
             <div class="printbutton">
-                <input onclick="printCard()" id="myPrint" name="impression" type="button" onclick="imprimer_page()"
-                    value="Imprimer" />
+                <input id="myPrint" name="impression" type="button" value="Imprimer" />
             </div>
         </div>
     </div>

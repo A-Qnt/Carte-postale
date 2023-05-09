@@ -1,3 +1,21 @@
+// Changement du titre
+
+let title = document.getElementById("myTitle")
+let titleOnCard = document.getElementById("myTitleOnCard")
+
+title.addEventListener("keyup", function () {
+    titleOnCard.innerText = title.value
+})
+
+//Changement du message
+
+let message = document.getElementById("myMessage")
+let messageOnCard = document.getElementById("myMessageOnCard")
+
+message.addEventListener("keyup", function () {
+    messageOnCard.innerText = message.value
+})
+
 // Changement de photo
 
 function changePictureForet() {
@@ -16,22 +34,24 @@ function changePictureMontagne() {
 }
 
 // Changement de Font
+let arial = document.getElementById("arial")
+let calibri = document.getElementById("calibri")
+let roboto = document.getElementById("roboto")
 
-function changeFontArial() {
+arial.addEventListener("click", function () {
     document.getElementById("myTitleOnCard").style.fontFamily = "Arial, Helvetica, sans-serif"
     document.getElementById("myMessageOnCard").style.fontFamily = "Arial, Helvetica, sans-serif"
-}
+})
 
-function changeFontCalibri() {
+calibri.addEventListener("click", function () {
     document.getElementById("myTitleOnCard").style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif "
     document.getElementById("myMessageOnCard").style.fontFamily = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif "
+})
 
-}
-
-function changeFontRoboto() {
+roboto.addEventListener("click", function () {
     document.getElementById("myTitleOnCard").style.fontFamily = "'Roboto', sans-serif"
     document.getElementById("myMessageOnCard").style.fontFamily = "'Roboto', sans-serif"
-}
+})
 
 // Changement de couleur de police
 
@@ -39,66 +59,56 @@ let myTitleOnCard = document.getElementById("myTitleOnCard")
 let myMessageOnCard = document.getElementById("myMessageOnCard")
 let myColor = document.getElementById("myColor")
 
-function changeColor() {
+myColor.addEventListener("blur", function () {
     myTitleOnCard.style.color = myColor.value
     myMessageOnCard.style.color = myColor.value
-    console.log("ok")
-}
+})
+
+
 
 // Changement de couleur de background
 
 let bordercard = document.getElementById("bordercard")
 let mybgColor = document.getElementById("mybgColor")
 
-function changebgColor() {
+mybgColor.addEventListener("blur", function () {
     bordercard.style.backgroundColor = mybgColor.value
+})
 
-}
 
 // Changement de style de font
 
 let myStyle = document.getElementById("myStyle")
 
-function changeStyleNormal() {
+myStyle.addEventListener("change", function () {
     switch (myStyle.value) {
         case "italic":
-            myTitleOnCard.style.textDecoration = "none"
-            myMessageOnCard.style.textDecoration = "none"
-            myTitleOnCard.style.fontWeight = "normal"
-            myMessageOnCard.style.fontWeight = "normal"
-            myTitleOnCard.style.fontStyle = "italic"
-            myMessageOnCard.style.fontStyle = "italic"
+            myTitleOnCard.classList.add("italic")
+            myTitleOnCard.classList.remove("bold", "underline")
+            myMessageOnCard.classList.add("italic")
+            myMessageOnCard.classList.remove("bold", "underline")
             break;
         case "bold":
-            myTitleOnCard.style.textDecoration = "none"
-            myMessageOnCard.style.textDecoration = "none"
-            myTitleOnCard.style.fontWeight = "bold"
-            myMessageOnCard.style.fontWeight = "bold"
-            myTitleOnCard.style.fontStyle = "normal"
-            myMessageOnCard.style.fontStyle = "normal"
+            myTitleOnCard.classList.add("bold")
+            myTitleOnCard.classList.remove("italic", "underline")
+            myMessageOnCard.classList.add("bold")
+            myMessageOnCard.classList.remove("italic", "underline")
             break;
         case "underline":
-            myTitleOnCard.style.textDecoration = "underline"
-            myMessageOnCard.style.textDecoration = "underline"
-            myTitleOnCard.style.fontWeight = "normal"
-            myMessageOnCard.style.fontWeight = "normal"
-            myTitleOnCard.style.fontStyle = "normal"
-            myMessageOnCard.style.fontStyle = "normal"
+            myTitleOnCard.classList.add("underline")
+            myTitleOnCard.classList.remove("bold", "italic")
+            myMessageOnCard.classList.add("underline")
+            myMessageOnCard.classList.remove("bold", "italic")
             break;
         default:
-            myTitleOnCard.style.textDecoration = "none"
-            myMessageOnCard.style.textDecoration = "none"
-            myTitleOnCard.style.fontWeight = "normal"
-            myMessageOnCard.style.fontWeight = "normal"
-            myTitleOnCard.style.fontStyle = "normal"
-            myMessageOnCard.style.fontStyle = "normal"
+            myTitleOnCard.classList.remove("italic", "bold", "underline")
+            myMessageOnCard.classList.remove("italic", "bold", "underline")
     }
-}
-
+})
 
 //  Print
 
-function printCard() {
-
+document.querySelector("#myPrint").addEventListener("click", function () {
     window.print()
-}
+})
+

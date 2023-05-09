@@ -7,6 +7,18 @@
      font-size: 20px;
  }
 
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
  .test {
      font-family: 'Roboto', sans-serif;
      font-style: italic;
