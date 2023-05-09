@@ -15,7 +15,7 @@ function changePictureMontagne() {
     montagne.src = "/assets/img/montagne.jpg"
 }
 
-// Changeent de Font
+// Changement de Font
 
 function changeFontArial() {
     document.getElementById("myTitleOnCard").style.fontFamily = "Arial, Helvetica, sans-serif"
@@ -42,6 +42,7 @@ let myColor = document.getElementById("myColor")
 function changeColor() {
     myTitleOnCard.style.color = myColor.value
     myMessageOnCard.style.color = myColor.value
+    console.log("ok")
 }
 
 // Changement de couleur de background
@@ -98,6 +99,6 @@ function changeStyleNormal() {
 //  Print
 
 function printCard() {
-    
+
     window.print()
 }
